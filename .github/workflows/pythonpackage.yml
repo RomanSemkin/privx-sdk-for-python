@@ -38,7 +38,7 @@ jobs:
         black ./privx_api
     - name: Check imports
       run: |
-        isort ./privx_api --settings-path linter_config.cfg
+        isort ./privx_api --settings-path linter_config.cfg -c -v 
     - name: Test with pytest
       run: |
         pytest
