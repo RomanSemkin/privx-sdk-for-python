@@ -35,10 +35,10 @@ jobs:
         flake8 ./privx_api --config ./linter_config.cfg
     - name: Format with Black
       run: |
-        black ./privx_api
+        black ./privx_api --check --diff
     - name: Check imports
       run: |
-        isort ./privx_api --settings-path linter_config.cfg -c -v 
+        isort ./privx_api --settings-path linter_config.cfg -c -v
     - name: Test with pytest
       run: |
         pytest
