@@ -32,7 +32,7 @@ jobs:
       run: |
         # stop the build if there are Python syntax errors or undefined names
         # exit-zero treats all errors as warnings.
-        flake8 ./privx_api --config linter_config.cfg
+        flake8 ./privx_api --config ./linter_config.cfg
     - name: Format with Black
       run: |
         black ./privx_api
